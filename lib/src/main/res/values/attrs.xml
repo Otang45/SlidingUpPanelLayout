@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SlidingUpPanelLayout">
+        <attr name="suplPanelHeight" format="dimension" />
+        <attr name="suplShadowHeight" format="dimension" />
+        <attr name="suplParallaxOffset" format="dimension" />
+        <attr name="suplFadeColor" format="color" />
+        <attr name="suplFlingVelocity" format="integer" />
+        <attr name="suplDragView" format="reference" />
+        <attr name="suplScrollableView" format="reference" />
+        <attr name="suplOverlay" format="boolean"/>
+        <attr name="suplClipPanel" format="boolean"/>
+        <attr name="suplAnchorPoint" format="float" />
+        <attr name="suplInitialState" format="enum">
+            <enum name="expanded" value="0" />
+            <enum name="collapsed" value="1" />
+            <enum name="anchored" value="2" />
+            <enum name="hidden" value="3" />
+        </attr>
+        <attr name="suplScrollInterpolator" format="reference" />
+    </declare-styleable>
+
+</resources>
