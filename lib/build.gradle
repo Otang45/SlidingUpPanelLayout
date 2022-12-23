@@ -3,6 +3,14 @@ plugins {
     id 'maven-publish'
 }
 
+ext {
+    PUBLISH_GROUP_ID = 'io.github.otang45'
+    PUBLISH_VERSION = '1.0'
+    PUBLISH_ARTIFACT_ID = 'SlidingUpPanelLayout'
+}
+
+apply from: 'publish-remote.gradle'
+
 android {
     compileSdk 32
     buildToolsVersion "33.0.3"
@@ -30,17 +38,4 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = 'com.github.Otang45'
-                artifactId = 'SlidingUpPanelLayout'
-                version = '1.0'
-            }
-        }
-    }
 }
